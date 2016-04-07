@@ -16,12 +16,14 @@ app.get('/', function(req, res) {
 
 app.get('/republican', function(req, res) {
   console.log('republican request');
+  res.send(republicans);
 });
 
 
 
 app.get('/democrat', function(req, res) {
   console.log('democrat request');
+  res.send(democrats);
 });
 
 
