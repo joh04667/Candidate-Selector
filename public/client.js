@@ -11,6 +11,7 @@ var buttonClicked = false;
   });
 
   $http.get('/republican').then(function(response) {
+    console.log(response);
     $scope.republicans = response.data;
   });
 

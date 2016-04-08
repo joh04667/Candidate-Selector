@@ -8,22 +8,26 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body ng-controller="N64Controller">
-  <div>
+  <div class="republicans">
     <h3>Republicans</h3>
-    <ul class="republicans">
-      <li ng-repeat="crooks in republicans">{{crooks}}</li>
+    <ul>
+      <li ng-repeat="crooks in republicans">{{crooks.name}}</li>
     </ul>
       <!-- republicans -->
+  </div>
+  <div class="democrats">
     <h3>Democrats</h3>
-    <ul class="democrats">
-      <li ng-repeat="socialists in democrats">{{socialists}}</li>
+    <ul>
+      <li ng-repeat="socialists in democrats">{{socialists.name}}</li>
     </ul>
       <!-- democrats -->
   </div>
+
   <div class="winner">
     <h1>Winner:</h1>
     <button ng-click="callWinner()">Who won?</button>
-    <h2>{{winner}}</h2>
+    <h2>{{winner.name}}</h2>
+    <img ng-src="{{winner.image}}" />
   </div>
   </body>
 </html>

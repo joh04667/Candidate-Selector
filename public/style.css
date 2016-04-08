@@ -2,10 +2,41 @@
   display: inline-block;
   color: red;
   /*float: left;*/
+  border: 2px solid black;
+  margin-right: 20px;
+  background-color: blanchedalmond;
+  padding: 20px;
+
 }
 
 .democrats {
   display: inline-block;
   color: blue;
   /*float: right;*/
+  border: 2px solid black;
+  margin-left: 20px;
+  background-color: blanchedalmond;
+  padding: 20px;
+}
+
+.democrats h3, .republicans h3 {
+  text-decoration: underline;
+}
+
+body {
+  background-color: lightpink;
+}
+
+.winner {
+  float:right;
+}
+
+
+ul{
+  list-style: none outside none;
+  text-align: left;
+  padding-left: 0;
+  line-height: 30px;
+  font-size: 15px;
+  font-family: helvetica;
 }
