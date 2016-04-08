@@ -1,0 +1,11 @@
+.republicans {
+  display: inline-block;
+  color: red;
+  /*float: left;*/
+}
+
+.democrats {
+  display: inline-block;
+  color: blue;
+  /*float: right;*/
+}

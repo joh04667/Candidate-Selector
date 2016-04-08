@@ -2,8 +2,8 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
-var republicans = ["D. Trump", "S. Squanto", "B. Bird", "W. Waldo", "C. Pig", "C. McGreedy", "Q. Cumber", "I.P. Freely"];
-var democrats = ["J. Howard", "M. Howard", "L. Fine", "S. Howard", "D. Suess", "H. Simpson", "P.J. Fry", "B.B. Rodriguez"]
+var politics = require('./public/politics');
+
 app.use(express.static('public'));
 
 // index
@@ -12,21 +12,20 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, './index.html'));
 });
 
-
-
 app.get('/republican', function(req, res) {
   console.log('republican request');
-  res.send(republicans);
+  res.send(politics.republicans);
 });
-
-
 
 app.get('/democrat', function(req, res) {
   console.log('democrat request');
-  res.send(democrats);
+  res.send(politics.democrats);
 });
 
-
+app.get('/deciscion', function(req, res) {
+  console.log('please dont let it be Trump');
+  res.send(politics.findWinner());
+});
 
 //server listening
 var server = app.listen(process.env.PORT || 3000, function() {
